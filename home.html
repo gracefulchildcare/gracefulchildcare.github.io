@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Graceful Child Care</title>
+      <link rel="icon" href="images/gccthemepurplet.png">
+      <link rel="stylesheet" href="general.css">
+      <script type="text/javascript" src="general.js"></script>
+      <script type="text/javascript" src="slideshow.js"></script>
+      <meta charset="utf-8"/>
+   </head>
+   <body onload="startSlideshow();defineMenu();" onscroll="detectSticky()" onresize="defineMenu()">
+      <div class="header">
+	      <div class="lang">
+	         <a id="current-lang">English</a> 
+	         <span>|</span>
+	         <a href="home-zh.html">中文</a>
+	      </div>
+	      <div class="top-bar">
+	         <a href="home.html" class="top-link" onmouseover="onTopBar()" onmouseout="nonTopBar()">
+	            <span id="e-img"><img id="e-img-i" class="top-img" src="images-final/logo.png" alt="Graceful Child Care"></span>
+	            <span id="e-txt"><h1>Graceful Child Care</h1></span>
+	         </a>
+	      </div>
+	      <div class="menu-before" id="menu-before"></div>
+	      <div class="menu" id="menu">
+	         <a class="menu-i current-page" href="home.html">Home</a>
+	         <div class="d-menu">
+	            <a id="d-about" class="d-menu-top" onmouseover="onDropdown()" onmouseout="nonDropdown()">About</a>
+	     	    <div class="d-menu-i" onmouseover="onDropdown()" onmouseout="nonDropdown()">
+	     	       <a class="d-menu-i-i" href="about/about-me.html">About Me</a>
+	     	       <a class="d-menu-i-i" href="about/mission.html">Mission</a>
+	     	       <a class="d-menu-i-i" href="about/schedule.html">Schedule</a>
+	     	       <a class="d-menu-i-i" href="about/holidays.html">Holidays</a>
+	     	       <a class="d-menu-i-i" href="about/tuition.html">Tuition</a>
+	     	    </div>
+	 	     </div>
+	         <a class="menu-i" href="news.html">News</a>
+	         <a class="menu-i" href="media.html">Media</a>
+	         <a class="menu-i" href="contact.html">Contact</a>
+	      </div>
+	      <div class="menu-after"></div>
+      </div>
+      <div class="slideshow">
+      	  <img id="first-img" class="ss-img" src="images-final/group1.jpg" alt="Group picture">
+      	  <img class="ss-img" src="images-final/ind1.jpg" alt="Individual picture">
+      	  <img class="ss-img" src="images-final/ind2.jpg" alt="Individual picture 2">
+      	  <img class="ss-img" src="images-final/ind3.jpg" alt="Individual picture 3">
+	      <div class="arrow-row">
+	         <img class="left-arrow" src="images-final/left.png" alt="back" onclick="changeImageUser(-1)">
+	         <img class="right-arrow" src="images-final/right.png" alt="forward" onclick="changeImageUser(1)">
+	      </div>
+	      <div class="circle-row">
+          	 <span class="circle current" onclick="displayImageUser(0)"></span>
+          	 <span class="circle" onclick="displayImageUser(1)"></span>
+          	 <span class="circle" onclick="displayImageUser(2)"></span>
+          	 <span class="circle" onclick="displayImageUser(3)"></span>
+          </div>
+      </div>
+      <div>
+          <div class="block" style="background-color: #4287f5; color: white;">
+	          <span class="home-h1">Welcome to Graceful Child Care</span>
+	          <p class="home-p">Founded in 2013, Graceful Child Care is a family-run day care where every child can grow and learn in a safe, nurturing home setting.</p>
+	          <a href="about/mission.html"><button class="home-button-1" type="button">Our Mission</button></a>
+          </div>
+          <div class="block">
+              <span class="home-h1">Personalized Care for Every Child</span>
+              <p class="home-p">I've always loved working with kids, and I'm excited to meet your child and work with you to make sure all their needs are met.</p>
+              <a href="about/about-me.html"><button class="home-button-1" type="button" style="border: 1px solid gray;">About Me</button></a>
+          </div>
+      </div>
+      <footer class="home-footer">
+         <br>
+         <h2>Graceful Child Care</h2>
+         <p>7312 34th Ave NE Seattle, WA 98115 • (206) 486-2471 • gracefulchildcare@gmail.com</p>
+         <br>
+         <p id="copyright"><br>Copyright © 2019 by Graceful Child Care. All rights reserved.</p>
+      </footer>
+   </body>
+</html>
