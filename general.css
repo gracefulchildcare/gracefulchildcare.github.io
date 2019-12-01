@@ -727,3 +727,19 @@ select:focus {
   border-color: white;
   background-color: white;
 }
+
+#contact-text {
+   font-size: 18px;
+   text-align: justify;
+   width: 48.75%;
+   margin: 0;
+   display: inline-block;
+   vertical-align: top;
+}
+
+#map {
+   max-width: 48.75%;
+   margin: 0;
+   display: inline-block;
+   vertical-align: top;
+}
