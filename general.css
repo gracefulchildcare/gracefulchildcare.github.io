@@ -177,19 +177,20 @@ table tr td {
    margin: auto;
    margin-top: 24px;
    margin-bottom: 24px;
+   overflow: auto;
 }
 
 .main-content-r {
    font-size: 18px;
    text-align: justify;
-   width: 48.75%;
+   width: auto;
    margin-right: 0;
 }
 
 .main-content-l {
    font-size: 18px;
    text-align: justify;
-   width: 48.75%;
+   width: auto;
    margin-left: 0;
 }
 
@@ -222,7 +223,7 @@ table tr td {
 
 .small-img-r {
    float: right;
-   max-width: 48.75%;
+   max-width: 20%;
    margin-bottom: 30px;
    margin-top: 0.2em;
    margin-left: 2.5%;
@@ -230,7 +231,7 @@ table tr td {
 
 .small-img-l {
    float: left;
-   max-width: 48.75%;
+   max-width: 20%;
    margin-bottom: 30px;
    margin-top: 0.2em;
    margin-right: 2.5%;
