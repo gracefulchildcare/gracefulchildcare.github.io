@@ -12,11 +12,11 @@ function nonDropdown() {
 }
 
 function onTopBar() {
-   document.getElementById("e-img-i").src = "/images-final/logo-theme-b.png";
+   document.getElementById("e-img-i").src = "https://gracefulchildcare.com/images-final/logo-theme-b.png";
 }
 
 function nonTopBar() {
-   document.getElementById("e-img-i").src = "/images-final/logo.png";
+   document.getElementById("e-img-i").src = "https://gracefulchildcare.com/images-final/logo.png";
 }
 
 function onTopBarAbout() {
