@@ -122,7 +122,7 @@ table tr td {
    padding: 0;
 }
 
-#schedule > tbody > :nth-child(1), #schedule > tbody > :nth-child(3), #schedule > tbody > :nth-child(10), #schedule > tbody > :nth-child(19) {
+#schedule > tbody > :nth-child(1), #schedule > tbody > :nth-child(3), #schedule > tbody > :nth-child(10), #schedule > tbody > :nth-child(18) {
    font-weight: bold;
 }
 
