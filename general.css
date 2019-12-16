@@ -270,6 +270,10 @@ a:hover {
    color: gray;
 }
 
+.in-text-link:hover {
+   font-weight: normal;
+}
+
 .lang {
    width: 98.7%;
    margin: auto;

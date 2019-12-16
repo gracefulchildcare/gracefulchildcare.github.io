@@ -26,10 +26,10 @@
 	         <div class="d-menu">
 	            <a id="d-about" class="d-menu-top current-page" onmouseover="onDropdown()">关于</a>
 	     	    <div class="d-menu-i" onmouseover="onDropdown()">
-	     	       <a class="d-menu-i-i" href="about-me-zh">关于我</a>
-	     	       <a class="d-menu-i-i" href="mission-zh">使命</a>
-	     	       <a class="d-menu-i-i" href="schedule-zh">时间表</a>
-	     	       <a class="d-menu-i-i" href="holidays-zh">假期</a>
+	     	       <a class="d-menu-i-i" href="about-me-zh">陈晓维老师简介</a>
+	     	       <a class="d-menu-i-i" href="mission-zh">办学理念</a>
+	     	       <a class="d-menu-i-i" href="schedule-zh">日程安排</a>
+	     	       <a class="d-menu-i-i" href="holidays-zh">节假日放假安排</a>
 	     	       <a class="d-menu-i-i" href="tuition-zh">学费</a>
 	     	    </div>
 	 	     </div>
@@ -41,13 +41,44 @@
       </div>
       <div class="content">
       	<h4>学费</h4>
+      	<p class="main-content">学费按月支付，并<strong>应在每月的第一天支付</strong>。如果某个月的第一天是周末，学费可在那个月的第一个星期一支付。学费可以用现金或支票支付。支票抬头请写付给“Graceful Child Care，LLC”。除非预先有安排，若学费迟于每月5日支付，需要缴纳<span class="highlight">25美元</span>的滞纳金。如果支票因银行存款不够而被退回，需要缴纳<span class="highlight">25美元</span>的罚金。如学生因病或因家庭休假而不能来上学，学费将不被退还。</p>
+        <br>
+        <p class="main-content"><strong>计算学费:</strong></p>
+        <div class="tuition-calc">
+	        <div class="dd">
+		        <span class="dd-label">年龄: </span>
+		        <select id="age">
+		        	<option value="2">2</option>
+		        	<option value="3">3</option>
+		        	<option value="4">4</option>
+		        	<option value="5">5</option>
+		        </select>
+	        </div>
+	        <div class="dd">
+		        <span class="dd-label">每周几天: </span>
+		        <select id="dpw">
+		        	<option value="2">2</option>
+		        	<option value="3">3</option>
+		        	<option value="4">4</option>
+		        	<option value="5">5</option>
+		        </select>
+	        </div>
+	        <button type="button" class="tuition-button" onclick="calculateTuition()">计算</button>
+	        <br>
+	        <span id="tuition-result"><strong>学费:</strong> <span class="highlight">每月<span id="t-r"></span>美元</span></span>
+        </div>
+        <br>
+        <p class="main-content">本幼儿园也接受按天上学的学生，学费为<span class="highlight">每天55美元</span>。前提是幼儿园当天有位置，并且学费要预付。</p>
+        <br>
+        <p class="main-content"><strong>延迟接放学罚款规定：</strong></p>
+        <p class="main-content">若学生在<strong>六点以后</strong>尚未被接走，<span class="highlight">每延迟1分钟将收取1美元</span>的延迟接放学罚款。</p>
       </div>
       <footer>
          <br>
          <h2>Graceful Child Care</h2>
          <p>7312 34th Ave NE Seattle, WA 98115 • (206) 486-2471 • gracefulchildcare@gmail.com</p>
          <br>
-         <p id="copyright"><br>Copyright © 2019 by Graceful Child Care. All rights reserved.</p>
+         <p id="copyright"><br>版权©2019 by Graceful Child Care。版权所有。</p>
       </footer>
    </body>
 </html>

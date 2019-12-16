@@ -27,10 +27,10 @@
 	         <div class="d-menu">
 	            <a id="d-about" class="d-menu-top" onmouseover="onDropdown()" onmouseout="nonDropdown()">关于</a>
 	     	    <div class="d-menu-i" onmouseover="onDropdown()" onmouseout="nonDropdown()">
-	     	       <a class="d-menu-i-i" href="about/about-me-zh">关于我</a>
-	     	       <a class="d-menu-i-i" href="about/mission-zh">使命</a>
-	     	       <a class="d-menu-i-i" href="about/schedule-zh">时间表</a>
-	     	       <a class="d-menu-i-i" href="about/holidays-zh">假期</a>
+	     	       <a class="d-menu-i-i" href="about/about-me-zh">陈晓维老师简介</a>
+	     	       <a class="d-menu-i-i" href="about/mission-zh">办学理念</a>
+	     	       <a class="d-menu-i-i" href="about/schedule-zh">日程安排</a>
+	     	       <a class="d-menu-i-i" href="about/holidays-zh">节假日放假安排</a>
 	     	       <a class="d-menu-i-i" href="about/tuition-zh">学费</a>
 	     	    </div>
 	 	     </div>
@@ -43,8 +43,8 @@
       <div class="slideshow">
       	  <img id="first-img" class="ss-img" src="images-final/group1.JPG" alt="小组图片">
       	  <img class="ss-img" src="images-final/ind1.JPG" alt="个人图片">
-      	  <img class="ss-img" src="images-final/ind2.JPG" alt="个人图片 2">
-      	  <img class="ss-img" src="images-final/ind3.JPG" alt="个人图片 3">
+      	  <img class="ss-img" src="images-final/ind2.JPG" alt="个人图片2">
+      	  <img class="ss-img" src="images-final/ind3.JPG" alt="个人图片3">
 	      <div class="arrow-row">
 	         <img class="left-arrow" src="images-final/left.png" alt="back" onclick="changeImageUser(-1)">
 	         <img class="right-arrow" src="images-final/right.png" alt="forward" onclick="changeImageUser(1)">
@@ -56,15 +56,24 @@
           	 <span class="circle" onclick="displayImageUser(3)"></span>
           </div>
       </div>
-      <div class="content">
-          <span class="home-h1">欢迎来到 Graceful Child Care</span>
+      <div>
+          <div class="block" style="background-color: #4287f5; color: white;">
+	          <span class="home-h1">欢迎来到Graceful Child Care</span>
+	          <p class="home-p">本幼儿园成立于2013年，是一家家庭日托，每个孩子都可以在安全、关爱的家庭环境中成长和学习。</p>
+	          <a href="about/mission"><button class="home-button-1" type="button">我们的办学理念</button></a>
+          </div>
+          <div class="block">
+              <span class="home-h1">针对每个孩子的个性化照顾</span>
+              <p class="home-p">我一直很喜欢与孩子们在一起。如果您的孩子在本幼儿园上学，我将与您一起确保您的孩子成长的所有需求得到满足。</p>
+              <a href="about/about-me"><button class="home-button-1" type="button" style="border: 1px solid gray;">陈晓维老师简介</button></a>
+          </div>
       </div>
-      <footer>
+      <footer class="home-footer">
          <br>
          <h2>Graceful Child Care</h2>
          <p>7312 34th Ave NE Seattle, WA 98115 • (206) 486-2471 • gracefulchildcare@gmail.com</p>
          <br>
-         <p id="copyright"><br>Copyright © 2019 by Graceful Child Care. All rights reserved.</p>
+         <p id="copyright"><br>版权©2019 by Graceful Child Care。版权所有。</p>
       </footer>
    </body>
 </html>
