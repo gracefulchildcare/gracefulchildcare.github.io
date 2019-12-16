@@ -223,7 +223,7 @@ table tr td {
 
 .small-img-r {
    float: right;
-   max-width: 20%;
+   max-width: 25%;
    margin-bottom: 30px;
    margin-top: 0.2em;
    margin-left: 2.5%;
@@ -231,7 +231,7 @@ table tr td {
 
 .small-img-l {
    float: left;
-   max-width: 20%;
+   max-width: 25%;
    margin-bottom: 30px;
    margin-top: 0.2em;
    margin-right: 2.5%;
