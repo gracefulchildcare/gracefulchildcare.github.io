@@ -136,7 +136,7 @@ table tr td {
 }
 
 
-#holidays > tbody > :nth-child(-n+3) > :nth-child(n+1) {
+#holidays > tbody > :nth-child(-n+4) > :nth-child(n+1) {
    color: gray;
 }
 
