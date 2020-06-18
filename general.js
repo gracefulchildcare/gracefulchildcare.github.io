@@ -44,23 +44,23 @@ function calculateTuition() {
    
    if (age=="2") {
       if (dpw=="2") {
-         tuition = 460;
+         tuition = 500;
       } else if (dpw=="3") {
-         tuition = 680;
+         tuition = 720;
       } else if (dpw=="4") {
-         tuition = 850;
+         tuition = 920;
       } else if (dpw=="5") {
-         tuition = 1000;
+         tuition = 1080;
       }
    } else {
       if (dpw=="2") {
-         tuition = 450;
+         tuition = 460;
       } else if (dpw=="3") {
-         tuition = 620;
+         tuition = 660;
       } else if (dpw=="4") {
-         tuition = 770;
+         tuition = 840;
       } else if (dpw=="5") {
-         tuition = 900;
+         tuition = 980;
       }
    }
    
