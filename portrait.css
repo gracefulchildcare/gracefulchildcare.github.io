@@ -121,7 +121,7 @@ table tr {
 
 table tr td {
    margin: 0;
-   padding: 0;
+   padding: 0.1em;
 }
 
 #schedule > tbody > :nth-child(1), #schedule > tbody > :nth-child(3), #schedule > tbody > :nth-child(10), #schedule > tbody > :nth-child(18) {
@@ -145,6 +145,9 @@ table tr td {
 .key-points {
    width: 100%;
    text-align: center;
+   margin-top: 1.1em;
+   margin-bottom: 1.1em;
+   /* border-spacing: 24px 12px; */
 }
 
 .key-point {
@@ -152,13 +155,19 @@ table tr td {
    font-size: 20px;
    font-style: normal;
    text-align: center;
-   margin-top: 0.5em;
-   margin-bottom: 0.5em;
-   padding-top: 0.7em;
-   padding-bottom: 0.7em;
-   width: 96%;
-   padding-left: 2%;
-   padding-right: 2%;
+   vertical-align: middle;
+   display: inline-block;
+   padding-left: 16px;
+   padding-right: 16px;
+   padding-top: 16px;
+   padding-bottom: 16px;
+   margin-left: 0.5em;
+   margin-right: 0.5em;
+   margin-top: 0.7em;
+   margin-bottom: 0.7em;
+   width: 80%;
+   height: 100px;
+   line-height: 100px;
    background-color: var(--c-theme);
    color: white;
    border-radius: 8px;
@@ -170,8 +179,9 @@ table tr td {
 }
 
 .key-point p {
-   margin-top: 0.3em;
-   margin-bottom: 0.3em;
+   display: inline-block;
+   vertical-align: middle;
+   line-height: normal;
 }
 
 .content {
@@ -224,19 +234,15 @@ table tr td {
 }
 
 .small-img-r {
-   float: right;
-   max-width: 25%;
-   margin-bottom: 30px;
+   max-width: 100%;
+   margin-bottom: 24px;
    margin-top: 0.2em;
-   margin-left: 2.5%;
 }
 
 .small-img-l {
-   float: left;
-   max-width: 25%;
-   margin-bottom: 30px;
+   max-width: 100%;
+   margin-bottom: 24px;
    margin-top: 0.2em;
-   margin-right: 2.5%;
 }
 
 #copyright {
@@ -526,6 +532,7 @@ select:focus {
 
 .tuition-calc {
    text-align: center;
+   margin-top: 1.2em;
 }
 
 .dd {
@@ -607,7 +614,7 @@ select:focus {
 .home-p {
    font-size: 18px;
    text-align: center;
-   width: 50%;
+   width: 90%;
    margin: auto;
    margin-top: 9px;
    margin-bottom: 9px;
@@ -628,6 +635,26 @@ select:focus {
 }
 
 .home-button-1:hover {
+   background-color: rgba(242, 242, 242, 0.8);
+   cursor: pointer;
+}
+
+.t-button-1 {
+   font-family: "Montserrat", sans-serif;
+   font-size: 16px;
+   margin: 0;
+   width: 180px;
+   color: black;
+   border: none;
+   border-radius: 6px;
+   padding-top: 11px;
+   padding-bottom: 9px;
+   background-color: white;
+   margin-top: 24px;
+   margin-bottom: 12px;
+}
+
+.t-button-1:hover {
    background-color: rgba(242, 242, 242, 0.8);
    cursor: pointer;
 }
@@ -742,14 +769,14 @@ select:focus {
 #contact-text {
    font-size: 18px;
    text-align: justify;
-   width: 48.75%;
+   width: 100%;
    margin: 0;
    display: inline-block;
    vertical-align: top;
 }
 
 #map {
-   max-width: 48.75%;
+   max-width: 100%;
    margin: 0;
    display: inline-block;
    vertical-align: top;

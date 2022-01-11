@@ -144,6 +144,9 @@ table tr td {
 .key-points {
    width: 100%;
    text-align: center;
+   margin-top: 1.6em;
+   margin-bottom: 1.6em;
+   /* border-spacing: 24px 12px; */
 }
 
 .key-point {
@@ -151,13 +154,17 @@ table tr td {
    font-size: 20px;
    font-style: normal;
    text-align: center;
-   margin-top: 0.5em;
-   margin-bottom: 0.5em;
-   padding-top: 0.7em;
-   padding-bottom: 0.7em;
-   width: 96%;
-   padding-left: 2%;
-   padding-right: 2%;
+   vertical-align: middle;
+   display: inline-block;
+   padding-left: 16px;
+   padding-right: 16px;
+   padding-top: 16px;
+   padding-bottom: 16px;
+   margin-left: 0.5em;
+   margin-right: 0.5em;
+   width: 15%;
+   height: 180px;
+   line-height: 180px;
    background-color: var(--c-theme);
    color: white;
    border-radius: 8px;
@@ -169,8 +176,9 @@ table tr td {
 }
 
 .key-point p {
-   margin-top: 0.3em;
-   margin-bottom: 0.3em;
+   display: inline-block;
+   vertical-align: middle;
+   line-height: normal;
 }
 
 .content {
@@ -521,6 +529,7 @@ select:focus {
 
 .tuition-calc {
    text-align: center;
+   margin-top: 0.1em;
 }
 
 .dd {
@@ -623,6 +632,26 @@ select:focus {
 }
 
 .home-button-1:hover {
+   background-color: rgba(242, 242, 242, 0.8);
+   cursor: pointer;
+}
+
+.t-button-1 {
+   font-family: "Montserrat", sans-serif;
+   font-size: 16px;
+   margin: 0;
+   width: 180px;
+   color: black;
+   border: none;
+   border-radius: 6px;
+   padding-top: 11px;
+   padding-bottom: 9px;
+   background-color: white;
+   margin-top: 24px;
+   margin-bottom: 12px;
+}
+
+.t-button-1:hover {
    background-color: rgba(242, 242, 242, 0.8);
    cursor: pointer;
 }
