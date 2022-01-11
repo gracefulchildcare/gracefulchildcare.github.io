@@ -279,9 +279,9 @@ a:hover {
    margin: auto;
    text-align: right;
    color: gray;
-   font-size: 12px;
-   line-height: 16px;
-   height: 16px;
+   font-size: 20px;
+   line-height: 24px;
+   height: 24px;
 }
 
 #current-lang {
