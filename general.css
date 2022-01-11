@@ -39,6 +39,7 @@ footer {
 footer p {
    margin: auto;
    text-align: center;
+   font-size: 16px;
 }
 
 .home-footer {
