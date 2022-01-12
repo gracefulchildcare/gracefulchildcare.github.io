@@ -71,7 +71,7 @@ function identifyImgSrc() {
 }
 
 function resizeImages() {
-   if (window.innerWidth < 750) { // Mobile
+   if (window.innerWidth <= 750) { // Mobile
       for (let i = 0; i < images.length; i++) {
          images[i].src = imgSrcM[i];
       }
