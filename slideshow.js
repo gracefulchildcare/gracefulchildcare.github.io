@@ -3,8 +3,8 @@ var inAnimation = false;
 var slideshow = true;
 var images = document.getElementsByClassName("ss-img");
 var circles = document.getElementsByClassName("circle");
-var imgSrc = [];
-var imgSrcM = [];
+var imgSrc = ["images-final/group1.JPG", "images-final/ind1.JPG", "images-final/ind2.JPG", "images-final/ind3.JPG"];
+var imgSrcM = ["images-final/group1-m.JPG", "images-final/ind1-m.JPG", "images-final/ind2-m.JPG", "images-final/ind3-m.JPG"];
 
 async function displayImage(i) {
    if (!inAnimation && i != currentImage) {
