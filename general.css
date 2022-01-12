@@ -206,8 +206,8 @@ table tr td {
       margin-top: 0.7em;
       margin-bottom: 0.7em;
       width: 80%;
-      height: 120px;
-      line-height: 120px;
+      height: 135px;
+      line-height: 135px;
       background-color: var(--c-theme);
       color: white;
       border-radius: 8px;
@@ -323,6 +323,11 @@ a:link {
    text-decoration: none !important;
 }
 
+a[href^=tel] {
+   text-decoration:inherit;
+   color: inherit;
+}
+
 a:visited {
    color: black;
 }
@@ -425,7 +430,7 @@ a:hover {
    padding-top: 6.3px;
    padding-bottom: 6.3px;
    width: 100%;
-   color: gray;
+   color: gray !important;
    text-decoration: none;
 }
 
@@ -738,6 +743,8 @@ select:focus {
    margin: 0;
    padding: 0;
    position: relative;
+   min-height: 120px;
+   /* background-color: #4287f58f; */
 }
 
 .ss-img {
@@ -838,6 +845,7 @@ select:focus {
 #map {
    max-width: 48.75%;
    margin: 0;
-   display: inline-block;
+   /* display: inline-block; */
    vertical-align: top;
+   float: right;
 }

@@ -1,12 +1,16 @@
 ﻿var currentImage = 0;
 var inAnimation = false;
 var slideshow = true;
+var images = document.getElementsByClassName("ss-img");
+var circles = document.getElementsByClassName("circle");
+var imgSrc = [];
+var imgSrcM = [];
 
 async function displayImage(i) {
    if (!inAnimation && i != currentImage) {
       inAnimation = true;
-      var images = document.getElementsByClassName("ss-img");
-      var circles = document.getElementsByClassName("circle");
+      // var images = document.getElementsByClassName("ss-img");
+      // var circles = document.getElementsByClassName("circle");
       if (i >= images.length) {
          i = 0;
       } else if (i < 0) {
@@ -56,4 +60,24 @@ function displayImageUser(i) {
 function changeImageUser(x) {
    slideshow = false;
    changeImage(x);
+}
+
+function identifyImgSrc() {
+   for (let i = 0; i < images.length; i++) {
+      imgSrc.push(images[i].src);
+      let ext = images[i].src.lastIndexOf(".");
+      imgSrcM.push(images[i].src.slice(0, ext) + "-m" + images[i].src.slice(ext));
+   }
+}
+
+function resizeImages() {
+   if (window.innerWidth <= 750) { // Mobile
+      for (let i = 0; i < images.length; i++) {
+         images[i].src = imgSrcM[i];
+      }
+   } else { // Desktop
+      for (let i = 0; i < images.length; i++) {
+         images[i].src = imgSrc[i];
+      }
+   }
 }

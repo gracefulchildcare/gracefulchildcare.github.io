@@ -2,7 +2,7 @@ var menuY;
 var cTheme = getComputedStyle(document.head).getPropertyValue('--c-theme');
 
 function onDropdown() {
-   document.getElementById("d-about").style.setProperty("color", cTheme);
+   document.getElementById("d-about").style.setProperty("color", cTheme, "important");
    document.getElementById("d-about").style.setProperty("font-weight", "bold");
 }
 

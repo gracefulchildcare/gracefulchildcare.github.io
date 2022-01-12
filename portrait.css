@@ -38,7 +38,11 @@ body {
 } */
 
 #navbarImg {
-   margin-right: 3px;
+   margin-right: 6px;
+}
+
+#nImg {
+   margin-right: 6px;
 }
 
 .nav-item {
@@ -250,8 +254,8 @@ table tr td {
    margin-top: 0.7em;
    margin-bottom: 0.7em;
    width: 80%;
-   height: 120px;
-   line-height: 120px;
+   height: 135px;
+   line-height: 135px;
    background-color: var(--c-theme);
    color: white;
    border-radius: 8px;
@@ -342,6 +346,11 @@ a:link {
    font-family: "Montserrat", "Consolas", "Courier New", "Courier", monospace;
    color: black;
    text-decoration: none !important;
+}
+
+a[href^=tel] {
+   text-decoration:inherit;
+   color: inherit;
 }
 
 a:visited {
@@ -763,6 +772,8 @@ select:focus {
    margin: 0;
    padding: 0;
    position: relative;
+   min-height: 120px;
+   /* background-color: #4287f58f; */
 }
 
 .ss-img {
