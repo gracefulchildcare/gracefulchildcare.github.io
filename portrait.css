@@ -63,8 +63,9 @@ body {
    color: gray;
 }
 
-.nav-item.dropdown.active {
+.nav-item.dropdown.active > #navbarDropdownMenuLink {
    font-weight: bold;
+   color: black;
 }
 
 .nav-link {
@@ -94,6 +95,11 @@ body {
 .dropdown-item {
    color: gray !important;
 }
+
+/* .nav-item.dropdown.active {
+   font-weight: bold;
+   color: black !important;
+} */
 
 footer {
    margin: auto;
