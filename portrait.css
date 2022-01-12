@@ -18,14 +18,81 @@ body {
    width: 100%;
    margin: 0;
    padding: 0;
+   padding-top: 60px;
 }
 
 .header {
-   width: 100%;
+   display: none;
+}
+
+.bsnavbar {
+   display: block;
+}
+
+.navbar-brand {
+   font-weight: bold;
+}
+
+/* .navbar-nav {
+   text-align: center;
+} */
+
+#navbarImg {
+   margin-right: 3px;
+}
+
+.nav-item {
+   font-weight: normal;
+   color: gray;
+}
+
+.nav-item.s-lang {
+   text-align: right;
+}
+
+.nav-item.active {
+   font-weight: bold;
+}
+
+/* .dropdown-item.active {
+   font-weight: bold;
+} */
+
+.nav-item.dropdown {
+   font-weight: normal;
+   color: gray;
+}
+
+.nav-item.dropdown.active {
+   font-weight: bold;
+}
+
+.nav-link {
+   color: gray;
+}
+
+#navbarDropdownMenuLink {
+   color: gray;
+}
+
+.navbar-toggler:hover {
+   background-color: rgba(232, 232, 232, 0.8);
+   cursor: pointer;
+}
+
+/* .nav-item.dropdown.show a {
+   color: gray !important;
+} */
+
+.dropdown-menu {
+   background-color: #f2f2f2;
+   border: none;
    margin: 0;
    padding: 0;
-   margin: auto;
-   background-color: #f2f2f2;
+}
+
+.dropdown-item {
+   color: gray !important;
 }
 
 footer {
@@ -58,6 +125,7 @@ h1 {
    font-family: "Montserrat", sans-serif;
    font-size: 36px;
    font-style: normal;
+   font-weight: bold;
    line-height: 39.6px;
    text-align: center;
    margin: 0;
@@ -70,6 +138,7 @@ h2 {
    font-style: normal;
    line-height: 19.8px;
    text-align: center;
+   font-weight: bold;
 }
 
 h3 {
@@ -122,6 +191,10 @@ table tr {
 table tr td {
    margin: 0;
    padding: 0.1em;
+}
+
+.bsnavbar navbar-brand {
+   font-weight: bold;
 }
 
 #schedule > tbody > :nth-child(1), #schedule > tbody > :nth-child(3), #schedule > tbody > :nth-child(10), #schedule > tbody > :nth-child(18) {

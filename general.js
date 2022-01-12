@@ -19,6 +19,14 @@ function nonTopBar() {
    document.getElementById("e-img-i").src = "https://gracefulchildcare.com/images-final/logo.png";
 }
 
+function nOnTopBar() {
+   document.getElementById("nImg").src = "https://gracefulchildcare.com/images-final/logo-theme-b.png";
+}
+
+function nNonTopBar() {
+   document.getElementById("nImg").src = "https://gracefulchildcare.com/images-final/logo.png";
+}
+
 function onTopBarAbout() {
    document.getElementById("e-img-i").src = "../images-final/logo-theme-b.png";
 }
