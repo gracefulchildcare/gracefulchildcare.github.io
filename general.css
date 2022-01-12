@@ -170,6 +170,39 @@ table tr td {
    border-radius: 8px;
 }
 
+@media screen and (max-width: 1242px) {
+   .key-points {
+      width: 100%;
+      text-align: center;
+      margin-top: 1.1em;
+      margin-bottom: 1.1em;
+      /* border-spacing: 24px 12px; */
+   }
+   
+   .key-point {
+      font-family: "Montserrat", sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      text-align: center;
+      vertical-align: middle;
+      display: inline-block;
+      padding-left: 16px;
+      padding-right: 16px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      margin-left: 0.5em;
+      margin-right: 0.5em;
+      margin-top: 0.7em;
+      margin-bottom: 0.7em;
+      width: 80%;
+      height: 60px;
+      line-height: 60px;
+      background-color: var(--c-theme);
+      color: white;
+      border-radius: 8px;
+   }
+ }
+
 .highlight {
    color: var(--c-theme);
    font-weight: bold;
@@ -233,7 +266,7 @@ table tr td {
 .small-img-r {
    float: right;
    max-width: 25%;
-   margin-bottom: 30px;
+   margin-bottom: 16px;
    margin-top: 0.2em;
    margin-left: 2.5%;
 }
@@ -241,9 +274,27 @@ table tr td {
 .small-img-l {
    float: left;
    max-width: 25%;
-   margin-bottom: 30px;
+   margin-bottom: 16px;
    margin-top: 0.2em;
    margin-right: 2.5%;
+}
+
+@media screen and (max-width: 1242px) {
+   .small-img-r {
+      float: right;
+      max-width: 50%;
+      margin-bottom: 16px;
+      margin-top: 0.2em;
+      margin-left: 2.5%;
+   }
+   
+   .small-img-l {
+      float: left;
+      max-width: 50%;
+      margin-bottom: 16px;
+      margin-top: 0.2em;
+      margin-right: 2.5%;
+   }
 }
 
 #copyright {
