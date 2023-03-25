@@ -152,6 +152,14 @@ table tr td {
    color: gray;
 }
 
+#holidays > tbody > :nth-child(6) > :nth-child(1) {
+   color: #ffc505;
+}
+
+#holidays > tbody > :nth-child(7) > :nth-child(1) {
+   color: #ffc505;
+}
+
 .key-points {
    width: 100%;
    text-align: center;
@@ -216,6 +224,11 @@ table tr td {
 
 .highlight {
    color: var(--c-theme);
+   font-weight: bold;
+}
+
+.highlight2 {
+   color: #ffc505;
    font-weight: bold;
 }
 
