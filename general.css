@@ -152,11 +152,19 @@ table tr td {
    color: gray;
 }
 
-#holidays > tbody > :nth-child(6) > :nth-child(1) {
+#holidays > tbody > :nth-child(4) > :nth-child(1) {
    color: #ffc505;
 }
 
-#holidays > tbody > :nth-child(7) > :nth-child(1) {
+#holidays > tbody > :nth-child(5) > :nth-child(1) {
+   color: #ffc505;
+}
+
+#holidays > tbody > :nth-child(9) > :nth-child(1) {
+   color: #ffc505;
+}
+
+#holidays > tbody > :nth-child(10) > :nth-child(1) {
    color: #ffc505;
 }
 
