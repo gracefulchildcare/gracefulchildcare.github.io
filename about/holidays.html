@@ -97,98 +97,19 @@
       </div>
       <div class="content">
       	<h4>Holidays</h4>
-		<p class="main-content"><span class="highlight2">Due to my son's commencement, Graceful Child Care will be closed on Monday, May 20 and Tuesday, May 21.</span></p>
 		<p class="main-content"><span class="highlight2">Summer break begins Monday, June 24 and ends Friday, July 5, a span of two weeks which includes the Independence Day holiday.</span></p>
       	<p class="main-content">In <span class="highlight">2024</span>, Graceful Child Care will be closed on the following days:</p>
       	<table id="holidays" class="push-table">
-      		<!-- <tr>
-      			<td>Saturday, January 1</td>
-      			<td>New Year's Day</td>
-      		</tr> -->
-      		<tr>
-      			<td>Monday, January 1</td>
-      			<td>New Year's Day</td>
-      		</tr>
-      		<tr>
-      			<td>Monday, January 15</td>
-      			<td>Martin Luther King Jr. Day</td>
-      		</tr>
-      		<tr>
-      			<td>Monday, February 19</td>
-      			<td>Presidents' Day</td>
-      		</tr>
-			<tr>
-				<td>Monday, May 20</td>
-				<td>No School</td>
-			</tr>
-			<tr>
-				<td>Tuesday, May 21</td>
-				<td>No School</td>
-			</tr>
-      		<tr>
-      			<td>Monday, May 27</td>
-      			<td>Memorial Day</td>
-      		</tr>
-			<tr>
-				<td>Wednesday, June 19</td>
-				<td>Juneteenth</td>
-			</tr>
-			<tr>
-				<td>Monday, June 24</td>
-				<td>Summer Break Begins</td>
-			</tr>
-      		<tr>
-      			<td>Thursday, July 4</td>
-      			<td>Independence Day</td>
-      		</tr>
-			<!-- <tr>
-				<td>Monday, July 4</td>
-				<td>Independence Day Observed</td>
-			</tr> -->
-			<tr>
-				<td>Friday, July 5</td>
-				<td>Summer Break Ends</td>
-			</tr>
-      		<tr>
-      			<td>Monday, September 2</td>
-      			<td>Labor Day</td>
-      		</tr>
-      		<!-- <tr>
-      			<td>Friday, November 11</td>
-      			<td>Veterans Day</td>
-      		</tr> -->
-			<tr>
-				<td>Monday, November 11</td>
-				<td>Veterans Day</td>
-			</tr>
-      		<tr>
-      			<td>Thursday, November 28</td>
-      			<td>Thanksgiving</td>
-      		</tr>
-      		<tr>
-      			<td>Friday, November 29</td>
-      			<td>Day after Thanksgiving</td>
-      		</tr>
-      		<tr>
-				<td>Tuesday, December 24</td>
-				<td>Christmas Eve</td>
-			</tr>
-			<!-- <tr>
-      			<td>Saturday, December 24</td>
-      			<td>Christmas Eve</td>
-      		</tr> -->
-			<tr>
-				<td>Wednesday, December 25</td>
-				<td>Christmas Day</td>
-			</tr>
-            <!-- <tr>
-      			<td>Monday, December 26</td>
-      			<td>Christmas Day Observed</td>
-      		</tr> -->
-            <tr>
-      			<td>Wednesday, January 1, 2025</td>
-      			<td>New Year's Day</td>
-      		</tr>
+			{% for holiday in site.data.holidays.holidays %}
+				<tr>
+					{% if forloop.last %}
+						<td>{{ holiday.date | date: "%A, %B %d, %Y" }}</td>
+					{% else %}
+						<td>{{ holiday.date | date: "%A, %B %d" }}</td>
+					{% endif %}
+					<td>{{ holiday.name }}</td>
+				</tr>
+			{% endfor %}
       	</table>
       	<p class="main-content"><strong>Note:</strong></p>
       	<p class="main-content">If a holiday falls on a <strong>Saturday</strong>, Graceful Child Care will be closed the <strong>preceding Friday.</strong></p>
