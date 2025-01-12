@@ -97,19 +97,19 @@
       </div>
       <div class="content">
       	<h4>Holidays</h4>
-		<p class="main-content"><span class="highlight2">Summer break begins Monday, June 24 and ends Friday, July 5, a span of two weeks which includes the Independence Day holiday.</span></p>
+		    <p class="main-content"><span class="highlight2">Summer break begins Monday, June 24 and ends Friday, July 5, a span of two weeks which includes the Independence Day holiday.</span></p>
       	<p class="main-content">In <span class="highlight">2024</span>, Graceful Child Care will be closed on the following days:</p>
       	<table id="holidays" class="push-table">
-			{% for holiday in site.data.holidays.holidays %}
-				<tr>
-					{% if forloop.last %}
-						<td>{{ holiday.date | date: "%A, %B %e, %Y" }}</td>
-					{% else %}
-						<td>{{ holiday.date | date: "%A, %B %e" }}</td>
-					{% endif %}
-					<td>{{ holiday.name }}</td>
-				</tr>
-			{% endfor %}
+			    {% for holiday in site.data.holidays.holidays %}
+				    <tr>
+					    {% if forloop.last %}
+						    <td>{{ holiday.date | date: "%A, %B %e, %Y" }}</td>
+					    {% else %}
+						    <td>{{ holiday.date | date: "%A, %B %e" }}</td>
+					    {% endif %}
+					    <td>{{ holiday.name }}</td>
+				    </tr>
+			    {% endfor %}
       	</table>
       	<p class="main-content"><strong>Note:</strong></p>
       	<p class="main-content">If a holiday falls on a <strong>Saturday</strong>, Graceful Child Care will be closed the <strong>preceding Friday.</strong></p>
