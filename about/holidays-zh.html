@@ -104,10 +104,11 @@
 				<tr>
 					{% assign weekday = holiday.date | date: "%A" %}
 					{% assign month = holiday.date | date: "%m" | plus: 0 %}
+					{% assign day = holiday.date | date: "%d" | plus: 0 %}
 					{% if forloop.last %}
-						<td>{{ holiday.date | date: "%Y年" }}{{ month }}{{ holiday.date | "月%e日" }}，{{ site.data.holidays.chinese-weekdays[weekday] }}</td>
+						<td>{{ holiday.date | date: "%Y年" }}{{ month }}月{{ day }}日，{{ site.data.holidays.chinese-weekdays[weekday] }}</td>
 					{% else %}
-						<td>{{ month }}{{ holiday.date | date: "月%e日" }}，{{ site.data.holidays.chinese-weekdays[weekday] }}</td>
+						<td>{{ month }}月{{ day }}日，{{ site.data.holidays.chinese-weekdays[weekday] }}</td>
 					{% endif %}
 					<td>{{ holiday.name-zh }}</td>
 				</tr>
