@@ -97,98 +97,20 @@
       </div>
       <div class="content">
       	<h4>节假日放假安排</h4>
-		<p class="main-content"><span class="highlight2">1. 因为我儿子今年大学毕业，5月20日毕业典礼，幼儿园定于5月20日星期一与5月21日星期二放假，关闭两天。</span></p>
-		<p class="main-content"><span class="highlight2">2. 今年暑期幼儿园定于 6 月 24日星期一至 7 月 5 日星期五放假两周，其中包括7月4日的独立纪念日放假在内。幼儿园在这两周将关闭。</span></p>
+		<p class="main-content"><span class="highlight2">今年暑期幼儿园定于6月24日星期一至7月5日星期五放假两周，其中包括7月4日的独立纪念日放假在内。幼儿园在这两周将关闭。</span></p>
       	<p class="main-content"><span class="highlight">2024</span>年，Graceful Child Care将在以下节假日放假：</p>
       	<table id="holidays" class="push-table">
-      		<!-- <tr>
-      			<td>1月1日，星期五</td>
-      			<td>元旦</td>
-      		</tr> -->
-      		<tr>
-				<td>1月1日，星期一</td>
-				<td>元旦</td>
-			</tr>
-      		<tr>
-      			<td>1月15日，星期一</td>
-      			<td>马丁·路德·金纪念日</td>
-      		</tr>
-      		<tr>
-      			<td>2月19日，星期一</td>
-      			<td>总统日</td>
-      		</tr>
-			<tr>
-				<td>5月20日，星期一</td>
-				<td>放假一天</td>
-			</tr>
-			<tr>
-				<td>5月21日，星期二</td>
-				<td>放假一天</td>
-			</tr>
-      		<tr>
-      			<td>5月27日，星期一</td>
-      			<td>阵亡将士纪念日</td>
-      		</tr>
-			<tr>
-				<td>6月19日，星期三</td>
-				<td>六月节</td>
-			</tr>
-			<tr>
-				<td>6月24日，星期一</td>
-				<td>暑期放假开始</td>
-			</tr>
-      		<tr>
-				<td>7月4日，星期四</td>
-				<td>独立纪念日</td>
-			</tr>
-			<!-- <tr>
-      			<td>7月4日，星期一</td>
-      			<td>独立纪念日放假</td>
-      		</tr> -->
-			<tr>
-				<td>7月5日，星期五</td>
-				<td>暑期放假结束</td>
-			</tr>
-      		<tr>
-      			<td>9月2日，星期一</td>
-      			<td>劳动节</td>
-      		</tr>
-      		<!-- <tr>
-      			<td>11月11日，星期五</td>
-      			<td>退伍军人节</td>
-      		</tr> -->
-			<tr>
-				<td>11月11日，星期一</td>
-				<td>退伍军人节</td>
-			</tr>
-      		<tr>
-      			<td>11月28日，星期四</td>
-      			<td>感恩节</td>
-      		</tr>
-      		<tr>
-      			<td>11月29日，星期五</td>
-      			<td>感恩节后一天</td>
-      		</tr>
-			<tr>
-				<td>12月24日，星期二</td>
-				<td>圣诞节前一天</td>
-			</tr>
-      		<!-- <tr>
-      			<td>12月24日，星期六</td>
-      			<td>圣诞节前一天</td>
-      		</tr> -->
-            <tr>
-      			<td>12月25日，星期三</td>
-      			<td>圣诞节</td>
-      		</tr>
-			<!-- <tr>
-				<td>12月26日，星期一</td>
-				<td>圣诞节放假</td>
-			</tr> -->
-            <tr>
-      			<td>2025年1月1日，星期三</td>
-      			<td>元旦</td>
-      		</tr>
+			{% for holiday in site.data.holidays.holidays %}
+				<tr>
+					{% assign weekday = holiday.date | date: "%A" %}
+					{% if forloop.last %}
+						<td>{{ holiday.date | date: "%Y年%m月%d日" }}，{{ site.data.holidays.chinese-weekdays[weekday] }}</td>
+					{% else %}
+						<td>{{ holiday.date | date: "%m月%d日" }}，{{ site.data.holidays.chinese-weekdays[weekday] }}</td>
+					{% endif %}
+					<td>{{ holiday.name-zh }}</td>
+				</tr>
+			{% endfor %}
       	</table>
       	<p class="main-content"><strong>注意：</strong></p>
       	<p class="main-content">如果节假日是在<strong>星期六</strong>，幼儿园将在<strong>星期五</strong>放假。</p>
