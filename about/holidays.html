@@ -103,9 +103,9 @@
 			{% for holiday in site.data.holidays.holidays %}
 				<tr>
 					{% if forloop.last %}
-						<td>{{ holiday.date | date: "%A, %B %d, %Y" }}</td>
+						<td>{{ holiday.date | date: "%A, %B %e, %Y" }}</td>
 					{% else %}
-						<td>{{ holiday.date | date: "%A, %B %d" }}</td>
+						<td>{{ holiday.date | date: "%A, %B %e" }}</td>
 					{% endif %}
 					<td>{{ holiday.name }}</td>
 				</tr>
