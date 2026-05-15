@@ -148,6 +148,10 @@ table tr td {
    text-align: left;
 }
 
+#holidays td:first-child {
+  color: gray;
+}
+
 #holidays tr.break td:first-child {
   color: #ffc505;
 }
