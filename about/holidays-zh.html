@@ -102,8 +102,20 @@
 		{% assign summer_break_ends = holidays | where: "name", "Summer Break Ends" | first %}
 		{% assign winter_break_begins = holidays | where: "name", "Winter Break Begins" | first %}
 		{% assign winter_break_ends = holidays | where: "name", "Winter Break Ends" | first %}
-		<p class="main-content"><span class="highlight2">今年暑期幼儿园定于{%- include format_date.html date=summer_break_begins.date zh=true -%}至{%- include format_date.html date=summer_break_ends.date zh=true -%}放假一周。幼儿园在这一周将关闭。</span></p>
-		<p class="main-content"><span class="highlight2">今年寒假幼儿园定于{%- include format_date.html date=winter_break_begins.date zh=true -%}至{%- include format_date.html date=winter_break_ends.date zh=true -%}放假一周。幼儿园在这一周将关闭。</span></p>
+		{% capture summer_break_begins_date %}
+			{% include format_date.html date=summer_break_begins.date zh=true %}
+		{% endcapture %}
+		{% capture summer_break_ends_date %}
+			{% include format_date.html date=summer_break_ends.date zh=true %}
+		{% endcapture %}
+		{% capture winter_break_begins_date %}
+			{% include format_date.html date=winter_break_begins.date zh=true %}
+		{% endcapture %}
+		{% capture winter_break_ends_date %}
+			{% include format_date.html date=winter_break_ends.date zh=true %}
+		{% endcapture %}
+		<p class="main-content"><span class="highlight2">今年暑期幼儿园定于{{ summer_break_begins_date | strip }}至{{ summer_break_ends_date | strip }}放假一周。幼儿园在这一周将关闭。</span></p>
+		<p class="main-content"><span class="highlight2">今年寒假幼儿园定于{{ winter_break_begins_date | strip }}至{{ winter_break_ends_date | strip }}放假一周。幼儿园在这一周将关闭。</span></p>
       	<p class="main-content"><span class="highlight">{{ "now" | date: "%Y" }}</span>年，Graceful Child Care将在以下节假日放假：</p>
       	<table id="holidays" class="push-table">
 			{% for holiday in holidays %}
@@ -113,8 +125,12 @@
 					{% assign is_break = false %}
 				{% endif %}
 
+				{% capture date_str %}
+					{% include format_date.html date=holiday.date zh=true zh_comma=true %}
+				{% endcapture %}
+
 				<tr class="{% if is_break %}break{% endif %}">
-				<td>{%- include format_date.html date=holiday.date zh=true zh_comma=true -%}</td>
+				<td>{{ date_str | strip }}</td>
 				<td>{{ holiday.name-zh }}</td>
 				</tr>
 			{% endfor %}
