@@ -107,7 +107,11 @@
       	<p class="main-content"><span class="highlight">{{ "now" | date: "%Y" }}</span>年，Graceful Child Care将在以下节假日放假：</p>
       	<table id="holidays" class="push-table">
 			{% for holiday in holidays %}
-				{% assign is_break = holiday.name contains "Break" %}
+				{% if holiday.name contains "Break" %}
+					{% assign is_break = true %}
+				{% else %}
+					{% assign is_break = false %}
+				{% endif %}
 
 				<tr class="{% if is_break %}break{% endif %}">
 				<td>{% include format_date.html date=holiday.date zh=true zh_comma=true %}</td>
