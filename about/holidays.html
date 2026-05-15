@@ -102,8 +102,20 @@
 		{% assign summer_break_ends = holidays | where: "name", "Summer Break Ends" | first %}
 		{% assign winter_break_begins = holidays | where: "name", "Winter Break Begins" | first %}
 		{% assign winter_break_ends = holidays | where: "name", "Winter Break Ends" | first %}
-		<p class="main-content"><span class="highlight2">Summer Break begins {%- include format_date.html date=summer_break_begins.date -%} and ends {%- include format_date.html date=summer_break_ends.date -%}.</span></p>
-		<p class="main-content"><span class="highlight2">Winter Break begins {%- include format_date.html date=winter_break_begins.date -%} and ends {%- include format_date.html date=winter_break_ends.date -%}.</span></p>
+		{% capture summer_break_begins_date %}
+			{% include format_date.html date=summer_break_begins.date %}
+		{% endcapture %}
+		{% capture summer_break_ends_date %}
+			{% include format_date.html date=summer_break_ends.date %}
+		{% endcapture %}
+		{% capture winter_break_begins_date %}
+			{% include format_date.html date=winter_break_begins.date %}
+		{% endcapture %}
+		{% capture winter_break_ends_date %}
+			{% include format_date.html date=winter_break_ends.date %}
+		{% endcapture %}
+		<p class="main-content"><span class="highlight2">Summer Break begins {{ summer_break_begins_date | strip }} and ends {{ summer_break_ends_date | strip }}.</span></p>
+		<p class="main-content"><span class="highlight2">Winter Break begins {{ winter_break_begins_date | strip }} and ends {{ winter_break_ends_date | strip }}.</span></p>
       	<p class="main-content">In <span class="highlight">{{ "now" | date: "%Y" }}</span>, Graceful Child Care will be closed on the following days:</p>
 		<table id="holidays" class="push-table">
 			{% for holiday in holidays %}
@@ -113,8 +125,12 @@
 					{% assign is_break = false %}
 				{% endif %}
 
+				{% capture date_str %}
+					{% include format_date.html date=holiday.date %}
+				{% endcapture %}
+
 				<tr class="{% if is_break %}break{% endif %}">
-				<td>{%- include format_date.html date=holiday.date -%}</td>
+				<td>{{ date_str | strip }}</td>
 				<td>{{ holiday.name }}</td>
 				</tr>
 			{% endfor %}
