@@ -97,24 +97,24 @@
       </div>
       <div class="content">
       	<h4>节假日放假安排</h4>
-		<p class="main-content"><span class="highlight2">今年暑期幼儿园定于7月28日星期一至8月1日星期五放假一周。幼儿园在这一周将关闭。</span></p>
-		<p class="main-content"><span class="highlight2">今年寒假幼儿园定于12月24日星期三至2026年1月1日星期四放假一周。幼儿园在这一周将关闭。</span></p>
-      	<p class="main-content"><span class="highlight">2025</span>年，Graceful Child Care将在以下节假日放假：</p>
+		{% assign holidays = site.data.holidays.holidays %}
+		{% assign summer_break_begins = holidays | where: "name", "Summer Break Begins" | first %}
+		{% assign summer_break_ends = holidays | where: "name", "Summer Break Ends" | first %}
+		{% assign winter_break_begins = holidays | where: "name", "Winter Break Begins" | first %}
+		{% assign winter_break_ends = holidays | where: "name", "Winter Break Ends" | first %}
+		<p class="main-content"><span class="highlight2">今年暑期幼儿园定于{% include format_date.html date=summer_break_begins.date zh=true %}至{% include format_date.html date=summer_break_ends.date zh=true %}放假一周。幼儿园在这一周将关闭。</span></p>
+		<p class="main-content"><span class="highlight2">今年寒假幼儿园定于{% include format_date.html date=winter_break_begins.date zh=true %}至{% include format_date.html date=winter_break_ends.date zh=true %}放假一周。幼儿园在这一周将关闭。</span></p>
+      	<p class="main-content"><span class="highlight">{{ "now" | date: "%Y" }}</span>年，Graceful Child Care将在以下节假日放假：</p>
       	<table id="holidays" class="push-table">
-			{% for holiday in site.data.holidays.holidays %}
-				<tr>
-					{% assign weekday = holiday.date | date: "%A" %}
-					{% assign month = holiday.date | date: "%m" | plus: 0 %}
-					{% assign day = holiday.date | date: "%d" | plus: 0 %}
-					{% if forloop.last %}
-						<td>{{ holiday.date | date: "%Y年" }}{{ month }}月{{ day }}日，{{ site.data.holidays.chinese-weekdays[weekday] }}</td>
-					{% else %}
-						<td>{{ month }}月{{ day }}日，{{ site.data.holidays.chinese-weekdays[weekday] }}</td>
-					{% endif %}
-					<td>{{ holiday.name-zh }}</td>
+			{% for holiday in holidays %}
+				{% assign is_break = holiday.name contains "Break" %}
+
+				<tr class="{% if is_break %}break{% endif %}">
+				<td>{% include format_date.html date=holiday.date zh=true zh_comma=true %}</td>
+				<td>{{ holiday.name-zh }}</td>
 				</tr>
 			{% endfor %}
-      	</table>
+		</table>
       	<p class="main-content"><strong>注意：</strong></p>
       	<p class="main-content">如果节假日是在<strong>星期六</strong>，幼儿园将在<strong>星期五</strong>放假。</p>
       	<p class="main-content">如果节假日是在<strong>星期日</strong>，幼儿园将在<strong>星期一</strong>放假。</p>

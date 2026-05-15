@@ -1,0 +1,23 @@
+{% assign current_year = "now" | date: "%Y" %}
+{% assign date_year = include.date | date: "%Y" %}
+
+{% if include.zh %}
+  {% assign weekday_en = include.date | date: "%A" %}
+  {% assign weekday_zh = site.data.holidays.chinese-weekdays[weekday_en] %}
+  {% if include.zh_comma %}
+    {% assign sep = "，" %}
+  {% else %}
+    {% assign sep = "" %}
+  {% endif %}
+  {% if date_year != current_year %}
+    {{ include.date | date: "%Y年%-m月%-d日" }}{{ sep }}{{ weekday_zh }}
+  {% else %}
+    {{ include.date | date: "%-m月%-d日" }}{{ sep }}{{ weekday_zh }}
+  {% endif %}
+{% else %}
+  {% if date_year != current_year %}
+    {{ include.date | date: "%A, %B %-d, %Y" }}
+  {% else %}
+    {{ include.date | date: "%A, %B %-d" }}
+  {% endif %}
+{% endif %}

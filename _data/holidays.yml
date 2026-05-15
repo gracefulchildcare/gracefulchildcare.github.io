@@ -1,61 +1,51 @@
 chinese-weekdays:
-  "Monday": "星期一"
-  "Tuesday": "星期二"
-  "Wednesday": "星期三"
-  "Thursday": "星期四"
-  "Friday": "星期五"
-  "Saturday": "星期六"
-  "Sunday": "星期天"
-
+  Monday: 星期一
+  Tuesday: 星期二
+  Wednesday: 星期三
+  Thursday: 星期四
+  Friday: 星期五
+  Saturday: 星期六
+  Sunday: 星期天
 holidays:
-  - name: "New Year's Day"
-    name-zh: "元旦"
-    date: "2025-01-01"
-  - name: "Martin Luther King Jr. Day"
-    name-zh: "马丁·路德·金纪念日"
-    date: "2025-01-20"
-  - name: "Presidents' Day"
-    name-zh: "总统日"
-    date: "2025-02-17"
-  - name: "Memorial Day"
-    name-zh: "阵亡将士纪念日"
-    date: "2025-05-26"
-  - name: "Juneteenth"
-    name-zh: "六月节"
-    date: "2025-06-19"
-  - name: "Independence Day"
-    name-zh: "独立纪念日"
-    date: "2025-07-04"
-  - name: "Summer Break Begins"
-    name-zh: "暑期放假开始"
-    date: "2025-07-28"
-  - name: "Summer Break Ends"
-    name-zh: "暑期放假结束"
-    date: "2025-08-01"
-  - name: "Labor Day"
-    name-zh: "劳动节"
-    date: "2025-09-01"
-  - name: "Veterans Day"
-    name-zh: "退伍军人节"
-    date: "2025-11-11"
-  - name: "Thanksgiving"
-    name-zh: "感恩节"
-    date: "2025-11-27"
-  - name: "Day after Thanksgiving"
-    name-zh: "感恩节后一天"
-    date: "2025-11-28"
-  - name: "Winter Break Begins"
-    name-zh: "寒假开始"
-    date: "2025-12-24"
-  # - name: "Christmas Eve"
-  #   name-zh: "圣诞节前一天"
-  #   date: "2025-12-24"
-  # - name: "Christmas Day"
-  #   name-zh: "圣诞节"
-  #   date: "2025-12-25"
-  # - name: "New Year's Day"
-  #   name-zh: "元旦"
-  #   date: "2026-01-01"
-  - name: "Winter Break Ends"
-    name-zh: "寒假结束"
-    date: "2026-01-01"
+- name: New Year's Day
+  name-zh: 元旦
+  date: '2026-01-01'
+- name: Martin Luther King Jr. Day
+  name-zh: 马丁·路德·金纪念日
+  date: '2026-01-19'
+- name: Presidents' Day
+  name-zh: 总统日
+  date: '2026-02-16'
+- name: Memorial Day
+  name-zh: 阵亡将士纪念日
+  date: '2026-05-25'
+- name: Juneteenth
+  name-zh: 六月节
+  date: '2026-06-19'
+- name: Independence Day Observed
+  name-zh: 独立纪念日前一天
+  date: '2026-07-03'
+- name: Summer Break Begins
+  name-zh: 暑期放假开始
+  date: '2026-07-27'
+- name: Summer Break Ends
+  name-zh: 暑期放假结束
+  date: '2026-07-31'
+- name: Labor Day
+  name-zh: 劳动节
+  date: '2026-09-07'
+- name: Veterans Day
+  name-zh: 退伍军人节
+  date: '2026-11-11'
+- name: Thanksgiving
+  name-zh: 感恩节
+  date: '2026-11-26'
+- name: Day after Thanksgiving
+  name-zh: 感恩节后一天
+  date: '2026-11-27'
+- name: Winter Break Begins
+  name-zh: 寒假开始
+  date: '2026-12-24'
+- name: Winter Break Ends
+  name-zh: 寒假结束
+  date: '2027-01-01'

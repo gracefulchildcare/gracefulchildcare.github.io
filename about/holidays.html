@@ -97,21 +97,24 @@
       </div>
       <div class="content">
       	<h4>Holidays</h4>
-		<p class="main-content"><span class="highlight2">Summer Break begins Monday, July 28 and ends Friday, August 1.</span></p>
-		<p class="main-content"><span class="highlight2">Winter Break begins Wednesday, December 24 and ends Thursday, January 1, 2026.</span></p>
-      	<p class="main-content">In <span class="highlight">2025</span>, Graceful Child Care will be closed on the following days:</p>
-      	<table id="holidays" class="push-table">
-			{% for holiday in site.data.holidays.holidays %}
-				<tr>
-					{% if forloop.last %}
-						<td>{{ holiday.date | date: "%A, %B %e, %Y" }}</td>
-					{% else %}
-						<td>{{ holiday.date | date: "%A, %B %e" }}</td>
-					{% endif %}
-					<td>{{ holiday.name }}</td>
+		{% assign holidays = site.data.holidays.holidays %}
+		{% assign summer_break_begins = holidays | where: "name", "Summer Break Begins" | first %}
+		{% assign summer_break_ends = holidays | where: "name", "Summer Break Ends" | first %}
+		{% assign winter_break_begins = holidays | where: "name", "Winter Break Begins" | first %}
+		{% assign winter_break_ends = holidays | where: "name", "Winter Break Ends" | first %}
+		<p class="main-content"><span class="highlight2">Summer Break begins {% include format_date.html date=summer_break_begins.date %} and ends {% include format_date.html date=summer_break_ends.date %}.</span></p>
+		<p class="main-content"><span class="highlight2">Winter Break begins {% include format_date.html date=winter_break_begins.date %} and ends {% include format_date.html date=winter_break_ends.date %}.</span></p>
+      	<p class="main-content">In <span class="highlight">{{ "now" | date: "%Y" }}</span>, Graceful Child Care will be closed on the following days:</p>
+		<table id="holidays" class="push-table">
+			{% for holiday in holidays %}
+				{% assign is_break = holiday.name contains "Break" %}
+
+				<tr class="{% if is_break %}break{% endif %}">
+				<td>{% include format_date.html date=holiday.date %}</td>
+				<td>{{ holiday.name }}</td>
 				</tr>
 			{% endfor %}
-      	</table>
+		</table>
       	<p class="main-content"><strong>Note:</strong></p>
       	<p class="main-content">If a holiday falls on a <strong>Saturday</strong>, Graceful Child Care will be closed the <strong>preceding Friday.</strong></p>
       	<p class="main-content">If a holiday falls on a <strong>Sunday</strong>, Graceful Child Care will be closed the <strong>following Monday.</strong></p>
